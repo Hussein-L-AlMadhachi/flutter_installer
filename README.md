@@ -1,5 +1,5 @@
 # Flutter one-click Installer
-An installer for the Flutter framework using Rhenium
+An installer for the Flutter framework using [Rhenium](https://github.com/Hussein-L-AlMadhachi/Rhenium.git)
 
 How to install:
 

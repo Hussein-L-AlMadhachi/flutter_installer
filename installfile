@@ -1,8 +1,7 @@
 
 exec
-	echo
 	echo 
-	echo  " [!]   Flutter is a Dart library so you need to have Dart installed"
+	echo  " [*]   Installing Flutter ..."
 	echo
 	echo
 end

@@ -1,0 +1,45 @@
+
+exec
+	echo
+	echo 
+	echo  " [!]   Flutter is a Dart library so you need to have Dart installed"
+	echo
+	echo
+end
+
+os {fedora}
+	sudo dnf install git wget unzip zip xz xz-devel xz-libs mesa-libGLU mesa-libGLU-devel
+end
+
+os {centos}
+	sudo yum install git wget unzip zip xz xz-devel xz-libs mesa-libGLU mesa-libGLU-devel
+end
+
+os {debian} or os {ubuntu}
+	sudo apt install git wget zip unzip xz-utils liblzma5 libglu1-mesa
+end
+
+os {arch}
+	sudo pacman -S git wget unzip zip xz xz-devel mesa-libglu mesa-libglu-devel
+end
+
+os not {fedora} and os not {debian} and os not {ubuntu} 
+	echo Your operating system is not supported
+	exit
+end
+
+exec
+	wget https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.16.4-stable.tar.xz --output-document=flutter_linux_3.16.4-stable.tar.xz
+#	tar xf flutter_linux_3.16.4-stable.tar.xz
+end
+
+exec
+	echo "# Flutter" >> .bashrc
+	echo "export PATH=$HOME/flutter/bin:\$PATH" >> .bashrc
+	# rm flutter_linux_3.16.4-stable.tar.xz
+	chmod +x flutter/bin/flutter
+	chmod +x flutter/bin/dart
+
+	export PATH=$HOME/flutter/bin:$PATH
+	flutter doctor -v
+end

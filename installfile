@@ -23,7 +23,7 @@ os {arch}
 	sudo pacman -S git wget unzip zip xz xz-devel mesa-libglu mesa-libglu-devel
 end
 
-os not {fedora} and os not {debian} and os not {ubuntu} 
+os not {fedora} and os not {debian} and os not {ubuntu} and os not {centos} 
 	echo Your operating system is not supported
 	exit
 end

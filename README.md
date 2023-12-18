@@ -1,7 +1,9 @@
 # flutter_installer
 An installer for the Flutter framework using Rhenium
 
-install Flutter with one command using Rhenium
+install Flutter with one command using Rhenium  
+
+
 
 1. Install Rhenium from this [script](https://github.com/Hussein-L-AlMadhachi/Rhenium/releases/download/v0.2.1/install.sh)
 

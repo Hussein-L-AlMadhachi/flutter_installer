@@ -28,14 +28,14 @@ os not {fedora} and os not {debian} and os not {ubuntu} and os not {centos}
 end
 
 exec
-	wget https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.16.4-stable.tar.xz --output-document=flutter_linux_3.16.4-stable.tar.xz
-	tar xf flutter_linux_3.16.4-stable.tar.xz
+	wget https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.24.3-stable.tar.xz --output-document=flutter_linux_3.24.3-stable.tar.xz
+	tar xf flutter_linux_3.24.3-stable.tar.xz
 end
 
 exec
 	echo "# Flutter" >> .bashrc
-	echo "export PATH=$HOME/flutter/bin:\$PATH" >> .bashrc
-	rm flutter_linux_3.16.4-stable.tar.xz
+	echo "export PATH=$HOME/flutter/bin:\$PATH" >> $HOME/.bashrc
+	rm flutter_linux_3.24.3-stable.tar.xz
 	chmod +x flutter/bin/flutter
 	chmod +x flutter/bin/dart
 
